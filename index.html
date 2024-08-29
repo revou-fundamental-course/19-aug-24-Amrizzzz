@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>School Profile</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div id="home1"></div>
+        <!-- Nav -->
+        <nav class="nav">
+
+            <!-- Nav Logo Image -->
+            <div class="image">
+                <a href="/">
+                    <img src="./public/top.jpg" />
+                    <h3>Top School</h3>
+                </a>
+            </div>
+
+            <!-- for mobile -->
+            <div class="mbl-mnu-container">
+                <ul id="mnu" class="mnu-mbl" onclick="clsMenu()">
+                    <li><a id="btn-cls" class="cls-btn-bar"
+                            onclick="clsMenu()">x</a></li>
+                            <br/>
+                            <!-- <br/> -->
+                    <!-- <li><a href="#home1">Home</a></li> -->
+                    <li><a href="#home1">Home</a></li>
+                    <br/>
+                    <li><a href="#profile">Our Profile</a></li>
+                    <br/>
+                    <!-- <li><a href="#achivement">Achivement</a></li> -->
+                    <li><a href="#message">Message Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Nav Menu -->
+            <div class="menu">
+                <!-- for tablet / desktop -->
+                <ul class="mnu-desk">
+                    <li><a href="#home1">Home</a></li>
+                    <li><a href="#profile">Our Profile</a></li>
+                    <!-- <li><a href="#achivement">Achivement</a></li> -->
+                    <li><a href="#message">Message Us</a></li>
+                </ul>
+
+                <!-- for mobile -->
+                <img id="mnu-bar" src="./public/icons8-menu-bar-50.png"
+                    onclick="shwMenu()" />
+            </div>
+        </nav>
+
+        <!-- End of Nav -->
+
+        <!-- Main -->
+        <main class="main">
+            <!-- onLoad -->
+             <div id="c-g"></div>
+             <div id="greetings">
+                <p class="jdl-greetings">Silahkan Masukkan Nama Anda</p>
+                <input id="g-name" type="text" placeholder="Masukkan Nama Anda"/>
+                <button class="sbmt" onclick="greetings()">Submit</button>
+             </div>
+
+            <!-- home section -->
+            <div id="home" class="home-section">
+                <div class="banner">
+                    <h2 id="name-judul">Hai, Welcome to Top School Website</h2>
+                    <div class="visi-misi">
+                        <div class="visi">
+                            <h1>Top School Vision</h1>
+                            <p>
+                                Terwujudnya Peserta Didik Yang Mandiri, Cerdas,
+                                Berakhlaqul Karimah, Kreatif, Bermartabat,
+                                Berdaya
+                                Guna, Berwawasan Lingkungan dan Eksis Dalam
+                                Pendidikan Yang Berkelanjutan
+                            </p>
+                        </div>
+                        <div class="misi">
+                            <h1>Top School Mision</h1>
+                            <ol>
+                                <li>
+                                    Menanamkan Keimanan dan Ketaqwaan Melalui
+                                    Pengamalan Ajaran Agama
+                                </li>
+                                <li>
+                                    Mengoptimalkan Proses
+                                    Pembelajaran dan Bimbingan
+                                </li>
+                                <li>Mengembangkan Bidang
+                                    Ilmu Pengetahuan dan Teknologi Berdasarkan
+                                    Minat,
+                                    Bakat dan Potensi Peserta Didik</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile section -->
+            <div id="profile" class="profile-container">
+                <h2>Our Profile</h2>
+                <div class="sub-profile">
+                    <div class="sub-profile-image">
+                        <img src="./public/teacher1.jpeg" alt="..." />
+                        <h4>Profesional Teacher</h4>
+                    </div>
+                    <div class="sub-profile-image">
+                        <img src="./public/sport.jpg" alt="..." />
+                        <h4>Sport Field</h4>
+                    </div>
+                    <div class="sub-profile-image">
+                        <img src="./public/classroom.png" alt="..." />
+                        <h4>Classroom</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- message section -->
+            <div id="message" class="message-container">
+                <h2>Message Us</h2>
+                <div class="form-container">
+                    <!-- form -->
+                    <div class="form">
+                        <table>
+                            <tr>
+                                <td>Nama</td>
+                                <td>:</td>
+                                <td>
+                                    <input
+                                        id="name"
+                                        type="text"
+                                        onchange="onChangeName(event)"
+                                        placeholder="Masukkan Nama Anda">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td id="name-c" class="validate">*Nama Tidak
+                                    Boleh Kosong</td>
+                            </tr>
+                            <tr>
+                                <td>Tanggal Lahir</td>
+                                <td>:</td>
+                                <td><input id="date" type="date"
+                                        onchange="onChangeDate(event)"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td id="date-c" class="validate">*Tanggal Tidak
+                                    Boleh Kosong</td>
+                            </tr>
+                            <tr>
+                                <td>Jenis Kelamin</td>
+                                <td>:</td>
+                                <td>
+                                    <div id="gender">
+                                        <div>
+                                            <input type="radio" name="gender"
+                                                value="Laki-laki"
+                                                onclick="gender1(event.target.value)">
+                                            Laki-laki
+                                        </div>
+                                        <div>
+                                            <input type="radio" name="gender"
+                                                value="Perempuan"
+                                                onclick="gender1(event.target.value)">
+                                            Perempuan
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td id="gender-c" class="validate">*Jenis
+                                    Kelamin Tidak Boleh Kosong</td>
+                            </tr>
+                            <tr>
+                                <td>Pesan</td>
+                                <td>:</td>
+                                <td><textarea name="pesan" id="message1"
+                                        onchange="onChangeMessage(event)"></textarea></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td id="pesan-c" class="validate">*Pesan Tidak
+                                    Boleh Kosong</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <button
+                                        id="submit"
+                                        onclick="submit()">
+                                        <b>Submit</b>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <button
+                                        id="reset"
+                                        onclick="reset()">
+                                        <b>Reset</b>
+                                    </button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- Result -->
+                    <div class="result">
+                        <table id="table-result"></table>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- End of Main -->
+
+        <!-- footer -->
+        <footer>
+            Top School © by Muhamad Amrizal
+        </footer>
+        <!-- End of Footer -->
+
+    </body>
+    <script src="./js/script.js"></script>
+</html>
